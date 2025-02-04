@@ -1,0 +1,136 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navbar h1:hover {
+  color: #007bff;
+}
+
+.Navbar-menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.Navbar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.Navbar-menu a:hover,
+.Navbar-menu a.active {
+  color: #ffffff;
+  background-color: #007bff;
+}
+
+.Navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+
+  .Navbar-menu {
+    flex-direction: row;
+    gap: 12px;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .Navbar-right {
+    width: 100%;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+  }
+  button {
+    padding: 10px 14px; /* Slightly reduced padding */
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar h1 {
+    font-size: 22px;
+  }
+
+  .Navbar-menu a {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+  .Navbar-right {
+    display: flex;
+    flex-direction: column; /* Fix: Stack buttons vertically */
+    align-items: center;
+    width: 100%;
+  }
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 90%; /* Fix: Ensure button scales properly */
+    max-width: 200px;
+  }
+}
+

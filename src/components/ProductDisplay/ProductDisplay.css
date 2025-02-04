@@ -1,0 +1,17 @@
+.product-display {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1280px; 
+  background-color: #f8f9fa; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+}
+
+.Product-Display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 30px; 
+  align-items: stretch; 
+  justify-content: center; 
+}
+
